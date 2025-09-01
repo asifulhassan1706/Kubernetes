@@ -31,11 +31,11 @@
 - `kubectl run <pod_name> --image=<image_name> --port <port> --expose` - Create pod, then expose it as service
 - `kubectl run <pod_name> --image=<image_name> --dry-run=client -o yaml > <file_name>.yaml` - Create Pod YAML File
 - `kubectl create deployment <deployment_name> --image=<image_name>` - Create Deployment
-- `kubectl create deployment <deployment_name> --image=<image_name> --dry-run=client -o yaml > <file_name>.yaml` #Create Deployment YAML File
-- `kubectl create service <service-type> <service_name> --tcp=<port:target_port>` - Create Service
-- `kubectl create service <service-type> <service_name> --tcp=<port:target_port> --dry-run=client -o yaml > <file_name>.yaml` #Create Service YAML File
-- `kubectl expose deployment <pod/deployment_name> --type=<service-type> --port=<port> --target-port=<target_port>` #Expose Service from Pod/Deployment
-- `kubectl create configmap <configmap_name> --from-literal=<key>=<value> --from-literal=<key>=<value>` #Create ConfigMap from Key-Value Pairs
+- Create Deployment YAML File -> `kubectl create deployment <deployment_name> --image=<image_name> --dry-run=client -o yaml > <file_name>.yaml`
+- Create Service -> `kubectl create service <service-type> <service_name> --tcp=<port:target_port>`
+- Create Service YAML File -> `kubectl create service <service-type> <service_name> --tcp=<port:target_port> --dry-run=client -o yaml > <file_name>.yaml`
+- Expose Service from Pod/Deployment -> `kubectl expose deployment <pod/deployment_name> --type=<service-type> --port=<port> --target-port=  <target_port>`
+- Create ConfigMap from Key-Value Pairs-> `kubectl create configmap <configmap_name> --from-literal=<key>=<value> --from-literal=<key>=<value>`
 - `kubectl create configmap <configmap_name> --from-file=<file_name>` - Create ConfigMap from File
 - `kubectl create configmap <configmap_name> --from-env-file=<file_name>` - Create ConfigMap from Environment File
 - `kubectl create secret generic <secret_name> --from-literal=<key>=<value> --from-literal=<key>=<value>` - Create Secret from Key-Value Pairs
